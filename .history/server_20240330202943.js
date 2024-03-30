@@ -10,7 +10,7 @@ app.use("/images", express.static(__dirname + "/src/Images/"));
 
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/src/Pages/Index.html");
+  res.sendFile(__dirname + "/src/Pages/Inex.html");
 });
 
 app.get("/Agendamento", (req, res) => {
