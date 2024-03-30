@@ -10,6 +10,4 @@
         <option class="select-selected" value="russo">Volume Russo</option>
       </select>
 
-      Volume Híbrido
-      Volume Egípcio
-      brasileiro
+     
