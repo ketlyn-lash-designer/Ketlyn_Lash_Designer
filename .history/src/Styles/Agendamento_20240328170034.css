@@ -1,0 +1,105 @@
+:root {
+  --cor-cinza: #4b4949;
+  --cor-rosa: #ff1493;
+  --oswald-font: "Oswald", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+.agendamento {
+  margin-top: 90%;
+  display: flex;
+  padding: 10%;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 0%;
+}
+
+input {
+  width: 280px;
+  height: 30px;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid var(--cor-cinza);
+  border-radius: 5px;
+  background-color: transparent;
+  font-family: var(--oswald-font);
+  font-weight: 600;
+  color: var(--cor-rosa);
+  background-color: transparent;
+  border: 2px solid var(--cor-rosa);
+}
+
+input[type="text"] {
+  font-family: var(--oswald-font);
+  font-weight: 600;
+  color: var(--cor-rosa);
+}
+
+
+input:focus,
+select:focus {
+  outline: 2px solid var(--cor-rosa);
+}
+
+#saveBtn {
+  width: 90px;
+  height: 40px;
+  margin: 10px;
+  padding: 5px;
+  margin-left: 20%;
+  background-color: transparent;
+  border: 1px solid var(--cor-rosa);
+  border-radius: 5px;
+  color: var(--cor-rosa);
+  font-family: var(--oswald-font);
+  font-weight: 600;
+}
+
+#saveBtn:focus {
+  outline: 2px solid var(--cor-rosa);
+}
+
+#saveBtn:hover {
+  background-color: transparent;
+}
+
+#datepicker {
+  margin-left: ;
+}
+
+#datetimepickerComponent {
+  font-family: var(--oswald-font);
+  align-items: center;
+}
+
+.logo_input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -43%;
+  margin-left: 70%;
+}
+
+#relogio {
+  width: 70px;
+  margin-top: -4%;
+}
+
+#calendario {
+  width: 70px;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Styles/Agendamento.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+
+    <title>Agendamento</title>
+  </head>
+  <body>
+    <div class="agendamento">
+      <div id="datetimepickerComponent">
+        <input type="text" id="datepicker" placeholder="Selecione uma data" />
+        <input
+          type="time"
+          id="timepicker"
+          placeholder="Selecione a hora"
+          min="10:00"
+          max="20:30"
+        />
+        <button id="saveBtn">Salvar</button>
+      </div>
+      <label id="horario" for="hora_escolhida">Horario</label>
+    </div>
+    <video autoplay muted loop id="video-bg">
+      <source src="../Images/pinterest-video36.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

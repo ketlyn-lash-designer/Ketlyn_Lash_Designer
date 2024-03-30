@@ -1,0 +1,21 @@
+:root {
+  --cor-cinza: #4b4949;
+  --cor-rosa: #ff1493;
+  --oswald-font: "Oswald", sans-serif;
+}
+
+body {
+  font-family: var(--roboto-condensed);
+  background-color: var(--cor-cinza);
+  background-position: center;
+  background-size: cover;
+}
+
+#foto-perfil {
+  margin-top: 5%;
+  margin-left: %;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}

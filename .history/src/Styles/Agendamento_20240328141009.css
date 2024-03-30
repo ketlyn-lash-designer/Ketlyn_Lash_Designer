@@ -1,0 +1,13 @@
+:root {
+  --cor-cinza: #4b4949;
+  --cor-rosa: #ff1493;
+  --oswald-font: "Oswald", sans-serif;
+}
+
+.agendamento {
+   margin-top: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

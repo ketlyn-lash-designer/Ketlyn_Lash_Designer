@@ -1,0 +1,15 @@
+{
+  "name": "lash",
+  "version": "1.0.0",
+  "description": "Descrição da sua aplicação",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "Seu nome",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0"
+  }
+}

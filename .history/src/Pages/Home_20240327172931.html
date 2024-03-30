@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Styles/Home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css"
+    />
+    <title>ketlyn_lash_designer.com</title>
+  </head>
+  <body>
+    <div class="form">
+      <input placeholder="Qual Seu Nome" type="text" name="nome" />
+      <input placeholder="whatsapp" type="text" name="whatsapp" />
+      <select name="tipo_cilio">
+        <option value="cilios_posticos">Qual Seu Cílo</option>
+        <option value="curvex">Curvex</option>
+      </select>
+      <span>Qual Horario é Melhor Para Seu Atendimento?</span>
+      <button id="openModal">Selecionar Horário</button>
+
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div id="calendar"></div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+		<script src=""></script>
+  </body>
+</html>

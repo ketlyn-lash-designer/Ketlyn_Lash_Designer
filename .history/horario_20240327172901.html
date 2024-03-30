@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selecionar Horário</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css"
+    />
+    <style>
+      
+    </style>
+  </head>
+  <body>
+    <span>Qual Horario é Melhor Para Seu Atendimento?</span>
+    <button id="openModal">Selecionar Horário</button>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="calendar"></div>
+      </div>
+    </div>
+    <script>
+      var modal = document.getElementById('modal'); var openModal = document.getElementById('openModal'); var close = document.getElementsByClassName('close')[0]; openModal.onclick = function() { modal.style.display = "block"; } close.onclick = function() { modal.style.display = "none"; } window.onclick = function(event) { if (event.target == modal) { modal.style.display = "none"; } } var picker = new Pikaday({ field: document.getElementById('calendar') });
+    </script>
+  </body>
+</html>

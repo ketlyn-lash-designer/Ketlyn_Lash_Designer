@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Styles/Home.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>ketlyn_lash_designer.com</title>
+  </head>
+  <body>
+    <div class="form">
+      <input placeholder="Qual Seu Nome" type="text" name="nome" />
+      <input
+        placeholder="whatsapp"
+        type="text"
+        name="whatsapp"
+        oninput="formatarNumero(this)"
+      />
+      <select class="custom-select" name="tipo_cilio">
+        <option class="select-designer" value="cilios_designer">
+          <p>Qual é Sua</p>
+        </option>
+        <option class="select-selected" value="brasileiro">
+          Volume Brasileiro
+        </option>
+        <option class="select-selected" value="egipcio ">Volume Egípcio</option>
+        <option class="select-selected" value="hibrido">Volume Híbrido</option>
+        <option class="select-selected" value="russo">Volume Russo</option>
+      </select>
+      <button>Horario Disponivel</button>
+    </div>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

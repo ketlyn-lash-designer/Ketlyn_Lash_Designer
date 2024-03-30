@@ -1,0 +1,93 @@
+:root {
+  --cor-cinza: #4b4949;
+  --cor-rosa: #ff1493;
+  --oswald-font: "Oswald", sans-serif;
+}
+
+body {
+  background-image: url("../images/escovinha.jpeg");
+  background-size: 100% 100%;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.agendamento {
+  margin-top: 100%;
+  display: flex;
+  padding: 10%;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 12%;
+}
+
+input {
+  width: 150px;
+  height: 30px;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid var(--cor-cinza);
+  border-radius: 5px;
+  background-color: transparent;
+  font-family: var(--oswald-font);
+  font-weight: 600;
+  color: var(--cor-rosa);
+  background-color: transparent;
+  border: 1px solid ;
+}
+
+input[type="text"] {
+  font-family: var(--oswald-font);
+  font-weight: 600;
+  color: var(--cor-rosa);
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid var(--cor-rosa);
+}
+
+#saveBtn {
+  width: 90px;
+  height: 40px;
+  margin: 10px;
+  padding: 5px;
+  margin-left: 20%;
+  background-color: transparent;
+  border: 1px solid var(--cor-cinza);
+  border-radius: 5px;
+  color: var(--cor-cinza);
+  font-family: var(--oswald-font);
+  font-weight: 600;
+}
+
+#saveBtn:focus {
+  outline: 2px solid var(--cor-rosa);
+}
+
+#saveBtn:hover {
+  background-color: transparent;
+}
+
+#data {
+  font-family: var(--oswald-font);
+  font-weight: 600;
+  margin-top: -65%;
+  margin-left: 44%;
+  text-wrap: nowrap;
+}
+
+#horario {
+  font-family: var(--oswald-font);
+  font-weight: 600;
+  margin-left: 75%;
+  margin-top: 15%;
+}
+
+#datepicker {
+  text-align: center;
+}
+
+#datetimepickerComponent {
+  font-family: var(--oswald-font) ;
+}

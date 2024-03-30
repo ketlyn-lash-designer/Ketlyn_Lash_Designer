@@ -1,0 +1,51 @@
+:root {
+  --cor-cinza: #4b4949;
+  --cor-rosa: #ff1493;
+  --oswald-font: "Oswald", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+#datetimepickerComponent {
+  margin-top: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  width: 300px;
+  height: 30px;
+  margin: 10px;
+  padding: 5px;
+  align-items: center;
+  border: 1.5px solid var(--cor-rosa);
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.336);
+  font-family: var(--oswald-font);
+  font-weight: 600;
+  margin-right: 20px;
+}
+
+#relogio {
+  position: absolute;
+  width: 70px;
+  z-index: 2; /* Certifique-se de que o z-index da imagem seja maior que do input */
+}
+
+#calendario {
+  width: 70px;
+}

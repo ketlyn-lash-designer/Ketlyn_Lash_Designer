@@ -1,0 +1,14 @@
+body {
+  background-image: url("../Images/preparando.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.modelos, img {
+	width:100px;
+	height:100px;
+	border-radius: 50%;
+}

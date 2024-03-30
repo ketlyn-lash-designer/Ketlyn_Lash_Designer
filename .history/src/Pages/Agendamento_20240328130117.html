@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Styles/Agendamento.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@eonasdan/tempus-dominus@6.9.4/dist/css/tempus-dominus.min.css"
+      crossorigin="anonymous"
+    />
+    <title>Agendamento</title>
+  </head>
+  <body>
+    <div id="datetimepickerComponent">
+      <input type="text" id="datepicker" placeholder="Selecione o dia" />
+      <input
+        type="time"
+        id="timepicker"
+        placeholder="Selecione a hora"
+        min="10:00"
+        max="20:30"
+      />
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha256-BRqBN7dYgABqtY9Hd4ynE+1slnEw+roEPFzQ7TRRfcg="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@eonasdan/tempus-dominus@6.9.4/dist/js/tempus-dominus.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/main.js"></script>
+    <script>
+      document
+  .getElementById("datetimepickerComponent")
+  .addEventListener("click", function () {
+    $("#datepicker").data("datetimepicker").show();
+  });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const datepickerInput = document.getElementById("datepicker");
+  const timepickerInput = document.getElementById("timepicker");
+
+  // Configuração do plugin Tempus Dominus para o datepicker
+  $(datepickerInput).datetimepicker({
+    format: "L",
+    locale: "pt-br",
+  });
+
+  // Configuração do plugin Tempus Dominus para o timepicker
+  $(timepickerInput).datetimepicker({
+    format: "LT",
+    locale: "pt-br",
+    enabledHours: [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+  });
+
+  datepickerInput.addEventListener("click", function () {
+    $(datepickerInput).data("datetimepicker").show();
+  });
+});
+
+    </script>
+  </body>
+</html>
