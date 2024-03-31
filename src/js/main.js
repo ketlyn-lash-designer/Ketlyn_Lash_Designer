@@ -42,7 +42,7 @@ saveBtn.addEventListener("click", function () {
   document.getElementById("lembrete").style.zIndex = "9999";
 
   setTimeout(function () {
-    window.location.href = "/"; 
+    window.location.href = "/Lash-Designer"; 
   }, 7000); // Tempo em milissegundos (4 segundos)
   const date = datepicker.value;
   const time = timepicker.value;
