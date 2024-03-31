@@ -11,7 +11,7 @@ app.use("/images", express.static(__dirname + "/src/Images/"));
 
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/Index.html");
+  res.sendFile(__dirname + "./Index.html");
 });
 
 app.get("/Agendamento", (req, res) => {

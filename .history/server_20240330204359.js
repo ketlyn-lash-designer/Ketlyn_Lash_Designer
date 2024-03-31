@@ -4,14 +4,14 @@ const port = 3000;
 
 // Configurando o servidor para servir arquivos estáticos
 app.use(express.static(__dirname + "/src"));
-app.use(express.static(__dirname + "/Index.html"));
+
 app.use("/js", express.static(__dirname + "/src/js/js"));
 app.use("/css", express.static(__dirname + "/src/Styles/css"));
 app.use("/images", express.static(__dirname + "/src/Images/"));
 
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/Index.html");
+  res.sendFile(__dirname + "./Index.html");
 });
 
 app.get("/Agendamento", (req, res) => {

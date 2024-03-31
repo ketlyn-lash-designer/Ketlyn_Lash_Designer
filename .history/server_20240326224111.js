@@ -3,7 +3,7 @@ import { readFile } from "fs";
 import { extname as _extname } from "path";
 
 const server = createServer((req, res) => {
-  const filePath = req.url === "/" ? "/pages/Home.html" : req.url;
+  const filePath = req.url === "/" ? "../Index.html" : req.url;
   const extname = _extname(filePath);
   const contentType = {
     ".html": "text/html",

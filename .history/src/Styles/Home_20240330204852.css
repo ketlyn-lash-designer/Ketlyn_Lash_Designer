@@ -70,4 +70,6 @@ select,
 option .select-designer {
   color: var(--cor-cinza);
   font-family: var(--oswald-font);
+
 }
+
