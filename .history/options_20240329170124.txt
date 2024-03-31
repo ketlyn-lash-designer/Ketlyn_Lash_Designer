@@ -1,6 +1,0 @@
-<select class="custom-select" name="tipo_cilio">
-        <option class="select-designer" value="cilios_designer">
-          <p>Qual é Seu Design</p>
-        </option>
-        <option class="select-selected" value="brasileiro">
-          Volume Brasileiro
