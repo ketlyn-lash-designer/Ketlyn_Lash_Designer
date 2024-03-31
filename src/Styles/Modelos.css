@@ -18,28 +18,40 @@ body {
 img {
   width: 100px;
   height: 100px;
-	padding: 35px 5px;
+  padding: 35px 5px;
   border-radius: 50%;
 }
 
 #descricao {
-	color: var(--cor-rosa);
-	margin-top: -35%;
-	margin-left: 40%;
-	h1 {
-		text-wrap: nowrap;
-		font-size: 40px;
-	}
-	p {
-		margin-top: -9%;
-		font-size: 20px;
-	}
+  color: var(--cor-rosa);
+  margin-top: -35%;
+  margin-left: 40%;
+  h1 {
+    text-wrap: nowrap;
+    font-size: 40px;
+  }
+  p {
+    margin-top: -9%;
+    font-size: 20px;
+  }
 }
 
-#volumehibrido{
-	margin-top: 25%;
+#volumehibrido {
+  margin-top: 25%;
 }
 
 #volumebrasileiro {
-	margin-top: 20%;
+  margin-top: 20%;
+}
+
+#img-volume-egipcio {
+  margin-top: -20px;
+}
+
+#img-volume-hibrido {
+	margin-top: 30px;
+}
+
+#img-volume-brasileiro {
+  margin-top: 30px;
 }
