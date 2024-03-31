@@ -30,7 +30,7 @@ const datepicker = document.getElementById("datepicker");
 const timepicker = document.getElementById("timepicker");
 
 saveBtn.addEventListener("click", function () {
-  document.getElementById("lembrete").style.display = "block"; // 
+  document.getElementById("lembrete").style.display = "block"; //
   document.getElementById("lembrete").style.position = "fixed";
   document.getElementById("lembrete").style.top = "0";
   document.getElementById("lembrete").style.left = "0";
@@ -42,11 +42,10 @@ saveBtn.addEventListener("click", function () {
   document.getElementById("lembrete").style.zIndex = "9999";
 
   setTimeout(function () {
-    window.location.href = "https://allan-mecanico.github.io/Lash-Designer/"; 
+    window.location.href = "../Pages/Home.html";
   }, 7000); // Tempo em milissegundos (4 segundos)
   const date = datepicker.value;
   const time = timepicker.value;
 
   alert(`Seu atendimento foi marcado para o dia ${date} às ${time} horas.`);
 });
-
