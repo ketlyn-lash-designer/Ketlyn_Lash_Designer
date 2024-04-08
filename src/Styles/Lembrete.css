@@ -1,0 +1,84 @@
+:root {
+  --cor-cinza: #4b4949;
+  --cor-rosa: #ff1493;
+  --cor-background: rgba(0, 0, 0, 0.747);
+  --oswald-font: "Oswald", sans-serif;
+  --parisienne-font: "Parisienne";
+  --luthier-font: "Luthier";
+}
+
+body {
+  background-image: url("../Images/preparando.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: "Luthier";
+  src: url("../fonts/LuthierFF/Luthier-Regular.ttf") format("truetype");
+  /* Adicione mais formatos (e.g. woff, woff2) conforme necessário */
+}
+
+@font-face {
+  font-family: "Parisienne";
+  src: url("../fonts/Parisienne-Regular.ttf") format("truetype");
+  /* Adicione mais formatos (e.g. woff, woff2) conforme necessário */
+}
+
+#ketlyn p {
+  font-family: var(--luthier-font);
+  margin-top: -15px;
+  font-style: italic;
+  font-size: 22px;
+  color: var(--cor-rosa);
+  font-weight: 600;
+}
+
+#ketlyn h1 {
+  font-family: "Parisienne";
+  color: var(--cor-rosa);
+  font-style: oblique;
+  font-weight: 900;
+  font-size: 41px;
+  text-wrap: nowrap;
+  margin-left: -5px;
+}
+
+.lembrete {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  text-align: center;
+  display: flex; /* Adicionando esta propriedade */
+  justify-content: center; /* Adicionando esta propriedade */
+  width: 210px;
+  height: 45px;
+  margin: 20px;
+  padding: 10px;
+  margin-right: 2px;
+  border: 2px solid var(--cor-rosa);
+  border-radius: 5px;
+  background-color: var(--cor-background);
+  font-family: var(--oswald-font);
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--cor-rosa);
+  z-index: 1;
+}
+
+#ketlyn_lash {
+  width: 380px;
+  height: 280px;
+  margin-top: 2%;
+  margin-left: 2%;
+  font-weight: 900;
+}

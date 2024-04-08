@@ -1,97 +1,66 @@
+//Função para formatar o número de telefone
 function formatarNumero(input) {
-  // Remove caracteres não numéricos
-  let numero = input.value.replace(/\D/g, "");
-
-  // Formata o número conforme desejado
-  let formattedNumber = numero.replace(
-    /^(\d{2})(\d{1})(\d{4})(\d{4})/,
-    "($1) $2 $3-$4"
-  );
-
-  // Atualiza o valor do input com o número formatado
-  input.value = formattedNumber;
+  let phoneNumber = input.value.replace(/\D/g, ""); // Remove todos os caracteres não numéricos
+  input.value = phoneNumber.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3"); // Formata no padrão (99) 99999-9999
 }
 
 flatpickr("#datepicker", {
   dateFormat: "d/m/Y",
-  locale: {
-    firstDayOfWeek: 1,
-    weekdays: {
-      shorthand: ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"],
-      longhand: [
-        "Domingo",
-        "Segunda-feira",
-        "Terça-feira",
-        "Quarta-feira",
-        "Quinta-feira",
-        "Sexta-feira",
-        "Sábado",
-      ],
-    },
-    months: {
-      shorthand: [
-        "Jan",
-        "Fev",
-        "Mar",
-        "Abr",
-        "Mai",
-        "Jun",
-        "Jul",
-        "Ago",
-        "Set",
-        "Out",
-        "Nov",
-        "Dez",
-      ],
-      longhand: [
-        "Janeiro",
-        "Fevereiro",
-        "Março",
-        "Abril",
-        "Maio",
-        "Junho",
-        "Julho",
-        "Agosto",
-        "Setembro",
-        "Outubro",
-        "Novembro",
-        "Dezembro",
-      ],
-    },
-  },
+  minDate: "today",
 });
+document.getElementById("timepicker").onchange = function () {
+  var selectedTime = this.value;
+  var selectedHour = parseInt(selectedTime.split(":")[0]);
+  var selectedMinute = parseInt(selectedTime.split(":")[1]);
 
-
-document.getElementById("timepicker").addEventListener("input", function () {
-  var inputValue = this.value;
-
-  if (inputValue < "10:00" || inputValue > "20:30") {
-    this.value = ""; // Limpa o valor se estiver fora do intervalo permitido
-    alert("Por favor, selecione uma hora entre 10:00 e 20:30");
+  if (
+    selectedHour < 10 ||
+    (selectedHour === 20 && selectedMinute > 30) ||
+    selectedHour > 20
+  ) {
+    alert("Por favor, selecione um horário entre 10:00 am e 20:30 pm.");
+    this.value = ""; // Limpar o valor do input
   }
-});
+};
 
+// Event listener para salvar os dados quando o botão for clicado - agendamento.html
 const saveBtn = document.getElementById("saveBtn");
-const datepicker = document.getElementById("datepicker");
-const timepicker = document.getElementById("timepicker");
-
-saveBtn.addEventListener("click", function () {
-  document.getElementById("lembrete").style.display = "block"; //
-  document.getElementById("lembrete").style.position = "fixed";
-  document.getElementById("lembrete").style.top = "0";
-  document.getElementById("lembrete").style.left = "0";
-  document.getElementById("lembrete").style.width = "100%";
-  document.getElementById("lembrete").style.height = "100%";
-  document.getElementById("lembrete").style.backgroundSize = "contain";
-  document.getElementById("lembrete").style.backgroundPosition = "center";
-  document.getElementById("lembrete").style.backgroundRepeat = "no-repeat";
-  document.getElementById("lembrete").style.zIndex = "9999";
-
-  setTimeout(function () {
-    window.location.href = "../Pages/Home.html";
-  }, 7000); // Tempo em milissegundos (4 segundos)
-  const date = datepicker.value;
-  const time = timepicker.value;
+saveBtn.addEventListener("click", () => {
+  const date = document.getElementById("datepicker").value;
+  const time = document.getElementById("timepicker").value;
+  const nomeValue = document.getElementById("nome").value;
+  const whatsappValue = document.getElementById("whatsapp").value;
+  const tipo_cilio = document.querySelector("select[name='tipo_cilio']").value;
 
   alert(`Seu atendimento foi marcado para o dia ${date} às ${time} horas.`);
+
+  fetch("https://github.com/allan-mecanico/Lash-Designer-back-end", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      nome: nomeValue,
+      whatsapp: whatsappValue,
+      dia: date,
+      horario: time,
+      tipo_cilio,
+    }),
+  })
+    .then((response) => response.text())
+    .then((data) => {
+      console.log(data);
+      // Navega para a página Lembrete.html
+      window.location.href = "Lembrete.html";
+      // Aguarda 7 segundos e depois navega para a página Home.html
+      setTimeout(() => {
+        window.location.href = "Home.html";
+      }, 7000);
+    });
+});
+
+// Event listener para chamar a função formatarNumero quando o input de whatsapp é alterado - agendamento.html
+const whatsapp = document.getElementById("whatsapp"); // Adicione esta linha para selecionar o input do WhatsApp corretamente
+whatsapp.addEventListener("input", function () {
+  formatarNumero(this);
 });

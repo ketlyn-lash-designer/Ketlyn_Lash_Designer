@@ -1,0 +1,99 @@
+:root {
+  --cor-cinza: #4b4949;
+  --cor-rosa: #ff1493;
+  --cor-background: rgba(0, 0, 0, 0.747);
+  --oswald-font: "Oswald", sans-serif;
+}
+
+body {
+  background-color: black;
+}
+
+li {
+  width: 700px;
+  height: 300px;
+  margin: 20px;
+  padding: 50px;
+  border: 5px solid var(--cor-cinza);
+  color: var(--cor-rosa);
+  border-radius: 5px;
+  background-color: var(--cor-background);
+  font-family: var(--oswald-font);
+  font-weight: 900;
+  list-style: none;
+}
+
+.nome {
+  font-weight: 600;
+  color: white;
+  /* font-size: 20px; */
+}
+
+input {
+  width: 280px;
+  height: 35px;
+  margin: 5px;
+  padding: 10px;
+  font-size: 20px;
+  border: 5px solid var(--cor-cinza);
+  color: var(--cor-rosa);
+  font-family: var(--oswald-font);
+  border-radius: 10px;
+  background-color: var(--cor-background);
+}
+
+label {
+  color: var(--cor-rosa);
+  font-size: 70px;
+  font-weight: 900;
+}
+
+#senha {
+  margin-left: 90px;
+  margin-top: 300px;
+}
+
+#whatsapp {
+  margin-top: 10px;
+  margin-right: 40px;
+}
+
+#btnsnh {
+  margin-left: 34px;
+}
+
+#whatsapp::placeholder {
+  color: var(--cor-cinza);
+  font-size: 30px;
+  font-weight: 400;
+  text-align: center;
+}
+
+#senha::placeholder {
+  color: var(--cor-cinza);
+  font-size: 30px;
+  font-weight: 400;
+  text-align: center;
+}
+
+button {
+  height: 50px;
+  width: 200px;
+  font-weight: 900;
+  font-size: 20px;
+  border-radius: 8px;
+  background-color: var(--cor-background);
+  color: var(--cor-rosa);
+  border: 3px solid var(--cor-cinza);
+}
+
+button:focus {
+  background-color: #ff149138; /* cor desejada */
+  border: 5px solid var(--cor-cinza);
+}
+
+#consulta,
+.resultado-consulta .nome {
+  font-size: 34px;
+  font-weight: 900;
+}

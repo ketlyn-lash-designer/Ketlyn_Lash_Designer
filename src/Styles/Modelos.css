@@ -1,17 +1,30 @@
 :root {
   --cor-cinza: #4b4949;
   --cor-rosa: #ff1493;
-  --font-family: "Bebas Neue", sans-serif;
+  --parisienne-font: "Parisienne";
+  --luthier-font: "Luthier";
 }
 
 body {
-  background-image: url("../Images/escovinhaspretasdesfocada.png");
+  /* background-image: url("../Images/preparando.jpg"); */
   background-size: 100% 100%;
-  font-family: var(--font-family);
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   overflow: hidden;
+  background-color: #f9d3dd;
+}
+
+@font-face {
+  font-family: "Luthier";
+  src: url("../fonts/LuthierFF/Luthier-Regular.ttf") format("truetype");
+  /* Adicione mais formatos (e.g. woff, woff2) conforme necessário */
+}
+
+@font-face {
+  font-family: "Parisienne";
+  src: url("../fonts/Parisienne-Regular.ttf") format("truetype");
+  /* Adicione mais formatos (e.g. woff, woff2) conforme necessário */
 }
 
 .modelos,
@@ -27,12 +40,16 @@ img {
   margin-top: -35%;
   margin-left: 40%;
   h1 {
+    font-family: var(--parisienne-font);
     text-wrap: nowrap;
-    font-size: 40px;
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: -15px;
   }
   p {
-    margin-top: -9%;
+    font-family: var(--luthier-font);
     font-size: 20px;
+    font-weight: 600;
   }
 }
 
@@ -49,7 +66,7 @@ img {
 }
 
 #img-volume-hibrido {
-	margin-top: 30px;
+  margin-top: 30px;
 }
 
 #img-volume-brasileiro {

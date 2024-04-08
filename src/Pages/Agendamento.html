@@ -3,51 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../Styles/Agendamento.css" />
-    <!-- <link
+    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
-    /> -->
+    />
+
+    <link rel="stylesheet" href="../Styles/Agendamento.css" />
 
     <title>Agendamento</title>
   </head>
   <body>
-    <img id="ketlyn_lash" src="../Images/ketlyn_lash_designer.png" alt="" />
+    <!-- <img id="ketlyn_lash" src="../Images/ketlyn_lash_designer.png" alt="" /> -->
+    <div id="ketlyn">
+      <h1>Ketlyn Lash Designer</h1>
+      <p>Rua Alencar De araripe 224 Sacomã</p>
+    </div>
     <div id="iconesinput">
-      <img id="calendario" src="../Images/calendario.png" alt="" />
-      <img id="relogio" src="../Images/relogio.png" alt="" />
+      <img
+        id="calendario"
+        src="../Images/simbolo-de-ferramentas-de-organizacao-e-administracao-de-horario-de-calendario-e-relogio.png"
+        alt=""
+      />
+      <img id="relogio" src="../Images/relogio-e-calendario.png" alt="" />
     </div>
     <div class="agendamento">
       <div id="datetimepickerComponent">
-        <input type="datepicker" id="datepicker" />
+        <input type="text" id="datepicker" placeholder="Selecione uma data" />
         <input type="time" id="timepicker" min="10:00" max="20:30" />
+        <input id="nome" placeholder="Nome" type="text" name="nome" />
+
+        <input
+          id="whatsapp"
+          placeholder="WhatsApp"
+          type="text"
+          name="whatsapp"
+          oninput="formatarNumero(this)"
+        />
         <div class="logo_input"></div>
       </div>
       <select class="custom-select" name="tipo_cilio">
         <option class="select-designer" value="cilios_designer">
-          <p>Qual é Seu Modelo</p>
+          Qual é Seu Modelo
         </option>
         <option class="select-selected" value="brasileiro">
           Volume Brasileiro
         </option>
-        <option class="select-selected" value="egipcio ">Volume Egípcio</option>
+        <option class="select-selected" value="egipcio">Volume Egípcio</option>
         <option class="select-selected" value="hibrido">Volume Híbrido</option>
         <!-- <option class="select-selected" value="russo">Volume Russo</option> -->
       </select>
-      <button id="saveBtn">Confirmar</button>
-    </div>
-    <img id="lembrete" src="../Images/lembrete1.png" style="display: none" />
-
-    <!-- <video autoplay muted loop id="video-bg">
-      <source src="../Images/pinterest-video36.mp4" type="video/mp4" />
-    </video> -->
-    <div id="whatsapp-button">
-      <a
-        href="https://api.whatsapp.com/send?phone=5511957464854"
-        target="_blank"
+      <button
+        id="saveBtn"
+        onclick="window.location.href = '../Pages/Lembrete.html';"
       >
-        <img id="botao-zap" src="../Images/whatsapp.png" alt="WhatsApp" />
-      </a>
+        Agendar
+      </button>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="../js/main.js"></script>

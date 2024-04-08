@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="../Styles/Agenda.css" />
+  <head>
+    <title>Lista de Dados</title>
+  </head>
+  <body>
+    <div>
+      <label for="senha">Senha:</label>
+      <input type="password" placeholder="Administrador" id="senha" />
+      <button id="btnsnh" onclick="verificarSenha()">Entrar</button>
+    </div>
+
+    <div>
+      <label for="whatsapp">Agendou:</label>
+      <input
+        type="text"
+        id="whatsapp"
+        placeholder="Digite seu WatsApp"
+        oninput="formatarNumero(this)"
+      />
+      <button id="btnwts" onclick="consultarLista()">Consultar</button>
+    </div>
+
+    <ul id="dados-lista"></ul>
+
+    <script>
+      let senhaCorreta = "190216"; // Defina a senha do administrador aqui
+      let listaDados = []; // Armazene a lista de dados aqui para facilitar a consulta
+
+      function verificarSenha() {
+        const senhaInput = document.getElementById("senha").value;
+        if (senhaInput === senhaCorreta) {
+          // Esconder campo de senha
+          const campoSenha = document.getElementById("senha");
+          campoSenha.style.display = "none";
+          const labelSenha = document.querySelector('label[for="senha"]');
+          labelSenha.style.display = "none";
+          const botaoEntrar = document.getElementById("btnsnh");
+          botaoEntrar.style.display = "none";
+          const labelWhatsapp = document.querySelector('label[for="whatsapp"]');
+          labelWhatsapp.style.display = "none";
+          const campoTelefone = document.getElementById("whatsapp");
+          campoTelefone.style.display = "none";
+          const botaoConsultar = document.getElementById("btnwts");
+          botaoConsultar.style.display = "none";
+
+          // Mostrar botões de listar atendimentos e buscar por nome
+          // const btnListarAtendimentos = document.createElement("button");
+          // btnListarAtendimentos.textContent =
+          //   "Atendimentos nos Últimos Sete Dias";
+          // btnListarAtendimentos.onclick = listarAtendimentosSeteDias;
+          // document.body.appendChild(btnListarAtendimentos);
+
+          // Mostrar todos os dados da lista
+          const dadosLista = document.getElementById("dados-lista");
+          dadosLista.innerHTML = "";
+          listaDados.forEach((dado) => {
+            const li = document.createElement("li");
+            li.innerHTML = `<span class="nome"> Nome: </span>${dado.nome} </br> <span class="nome">Whatsapp: </span>${dado.whatsapp}</br> <span class="nome">Dia: </span>${dado.data}</br> <span class="nome">Hora: </span>${dado.hora}</br> <span class="nome">Modelo de Cílio: </span>${dado["modelo do cilio"]}`;
+            // <span class="nome">Cliente: </span>${dado.id}</br> buscar dado id e mostrar na tela so colar no innerHTML
+            dadosLista.appendChild(li);
+          });
+        } else {
+          alert("Senha incorreta. Tente novamente.");
+        }
+      }
+
+      function listarAtendimentosSeteDias() {
+        // Implemente a lógica para listar os atendimentos nos últimos sete dias
+      }
+
+      function consultarLista() {
+        const whatsappInput = document.getElementById("whatsapp").value;
+        const dado = listaDados.find((d) => d.whatsapp === whatsappInput);
+        if (dado) {
+          // Mostrar os dados do WhatsApp consultado
+          const dadosLista = document.getElementById("dados-lista");
+          dadosLista.innerHTML = "";
+          const li = document.createElement("li");
+          li.id = "consulta";
+          li.innerHTML = `<span class="nome">Cliente: </span>${dado.id}</br> <span class="nome"> Nome: </span>${dado.nome} </br> <span class="nome">Whatsapp: </span>${dado.whatsapp}</br> <span class="nome">Dia: </span>${dado.data}</br> <span class="nome">Hora: </span>${dado.hora}</br> <span class="nome">Modelo de Cílio: </span>${dado["modelo do cilio"]}`;
+          li.classList.add("resultado-consulta"); // Adiciona a classe para o estilo
+          dadosLista.appendChild(li);
+        } else {
+          alert("Nenhum registro encontrado para o WhatsApp informado.");
+        }
+      }
+      fetch("https://github.com/allan-mecanico/Lash-Designer-back-end")
+        .then((response) => response.json())
+        .then((data) => {
+          listaDados = data;
+
+          // Ordenar os dados por data e horário
+          listaDados.sort((a, b) => {
+            // Ordenar por data
+            if (a.data < b.data) {
+              return -1;
+            }
+            if (a.data > b.data) {
+              return 1;
+            }
+            // Se as datas forem iguais, ordenar por horário
+            if (a.hora < b.hora) {
+              return -1;
+            }
+            if (a.hora > b.hora) {
+              return 1;
+            }
+            return 0;
+          });
+        })
+        .catch((error) => console.error("Erro ao buscar os dados:", error));
+
+      //lista somente os dados
+      // fetch("http://192.168.10.20:8000/dados")
+      //   .then((response) => response.json())
+      //   .then((data) => {
+      //     listaDados = data;
+      //   })
+      //   .catch((error) => console.error("Erro ao buscar os dados:", error));
+    </script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

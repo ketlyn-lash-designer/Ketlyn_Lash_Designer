@@ -1,7 +1,22 @@
 :root {
   --cor-cinza: #4b4949;
   --cor-rosa: #ff1493;
+  --cor-background: rgba(0, 0, 0, 0.747);
   --oswald-font: "Oswald", sans-serif;
+  --parisienne-font: "Parisienne";
+  --luthier-font: "Luthier";
+}
+
+@font-face {
+  font-family: "Luthier";
+  src: url("../fonts/LuthierFF/Luthier-Regular.ttf") format("truetype");
+  /* Adicione mais formatos (e.g. woff, woff2) conforme necessário */
+}
+
+@font-face {
+  font-family: "Parisienne";
+  src: url("../fonts/Parisienne-Regular.ttf") format("truetype");
+  /* Adicione mais formatos (e.g. woff, woff2) conforme necessário */
 }
 
 /* body {
@@ -28,6 +43,12 @@ body {
   overflow: hidden;
 }
 
+.parisienne-regular {
+  font-family: "Parisienne", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .agendamento {
   position: relative;
   display: flex;
@@ -39,21 +60,26 @@ body {
 
 input {
   position: relative;
-  margin-top: -90%;
+  margin-top: -60%;
   display: flex;
   width: 160px;
   height: 35px;
   margin: 20px;
   padding: 5px;
   margin-right: 2px;
-  border: 1.5px solid var(--cor-rosa);
+  border: 1.8px solid var(--cor-rosa);
   border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.336);
+  background-color: var(--cor-background);
   font-family: var(--oswald-font);
   font-weight: 600;
   font-size: 17.5px;
   color: var(--cor-rosa);
   z-index: 1;
+}
+
+input::placeholder {
+  text-align: center;
+  color: var(--cor-rosa);
 }
 
 #iconesinput {
@@ -68,25 +94,29 @@ input {
 }
 
 #relogio {
-  width: 80px;
+  text-align: center;
+  width: 40px;
   z-index: 1;
-  margin-top: -18px;
+  margin-top: -10px;
+  margin-left: 30px;
 }
 
 #calendario {
-  width: 80px;
+  text-align: center;
+  width: 40px;
   z-index: 1;
-  margin-top: -20px;
+  margin-bottom: 40px;
+  margin-left: 30px;
 }
 
 #saveBtn {
   width: 170px;
-  height: 40px;
+  height: 45px;
   padding: 5px;
   margin-left: 20px;
-  font-size: 16px;
-  background-color: rgba(0, 0, 0, 0.336);
-  border: 1px solid var(--cor-rosa);
+  font-size: 17.5px;
+  background-color: var(--cor-background);
+  border: 1.8px solid var(--cor-rosa);
   border-radius: 5px;
   color: var(--cor-rosa);
   font-family: var(--oswald-font);
@@ -97,30 +127,47 @@ button:focus {
   outline: 2px solid var(--cor-rosa);
 }
 
-#ketlyn_lash {
+/* #ketlyn_lash {
   width: 380px;
   height: 280px;
-  margin-top: 10%;
+  margin-top: 2%;
   margin-left: 2%;
   font-weight: 900;
+} */
+
+#ketlyn p {
+  font-family: var(--luthier-font);
+  margin-top: -15px;
+  font-style: italic;
+  font-size: 20px;
+  color: var(--cor-rosa);
+  font-weight: 600;
+  text-wrap: nowrap;
+  text-align: center;
+  margin-bottom: 80px;
 }
 
-#botao-zap {
-  width: 40px;
-  margin-top: 90px;
-  margin-left: 10px;
+#ketlyn h1 {
+  text-align: center;
+  font-family: "Parisienne";
+  color: var(--cor-rosa);
+  font-style: oblique;
+  font-weight: 900;
+  font-size: 40px;
+  text-wrap: nowrap;
+  margin-left: -6px;
 }
 
 .custom-select {
   margin-bottom: 18px;
   width: 170px;
-  height: 40px;
+  height: 45px;
   padding: 5px;
   border-radius: 5px;
   margin-left: 20px;
   font-size: 16.5px;
-  background-color: rgba(0, 0, 0, 0.336);
-  border: 1px solid var(--cor-rosa);
+  background-color: var(--cor-background);
+  border: 1.8px solid var(--cor-rosa);
   color: var(--cor-rosa);
   font-family: var(--oswald-font);
   font-weight: 600;
