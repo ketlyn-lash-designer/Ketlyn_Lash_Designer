@@ -35,7 +35,7 @@ video {
 } */
 
 body {
-  background-image: url("../Images/preparando.jpg");
+  background-image: url("../Images/preparando.png");
   background-size: 100% 100%;
   background-position: center;
   background-attachment: fixed;
@@ -139,12 +139,13 @@ button:focus {
   font-family: var(--luthier-font);
   margin-top: -15px;
   font-style: italic;
-  font-size: 20px;
+  font-size: 18px;
   color: var(--cor-rosa);
   font-weight: 600;
   text-wrap: nowrap;
   text-align: center;
   margin-bottom: 80px;
+  letter-spacing: 2px;
 }
 
 #ketlyn h1 {
