@@ -8,6 +8,7 @@ flatpickr("#datepicker", {
   dateFormat: "d/m/Y",
   minDate: "today",
 });
+
 document.getElementById("timepicker").onchange = function () {
   var selectedTime = this.value;
   var selectedHour = parseInt(selectedTime.split(":")[0]);
@@ -38,6 +39,12 @@ saveBtn.addEventListener("click", () => {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      "Content-Length": "394",
+      Connection: "keep-alive",
+      Vary: "Accept-Encoding",
+      "Access-Control-Allow-Origin": "*",
+      "X-Clacks-Overhead": "GNU Terry Pratchett",
+      Server: "PythonAnywhere",
     },
     body: JSON.stringify({
       nome: nomeValue,
