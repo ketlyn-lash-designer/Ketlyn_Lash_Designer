@@ -44,7 +44,7 @@ saveBtn.addEventListener("click", () => {
       Vary: "Accept-Encoding",
       "Access-Control-Allow-Origin": "*",
       "X-Clacks-Overhead": "GNU Terry Pratchett",
-      Server: "PythonAnywhere",
+      Server: "GitHub.com",
     },
     body: JSON.stringify({
       nome: nomeValue,
