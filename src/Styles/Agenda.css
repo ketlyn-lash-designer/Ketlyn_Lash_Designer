@@ -21,12 +21,13 @@ li {
   font-family: var(--oswald-font);
   font-weight: 900;
   list-style: none;
+  font-size: 25px;
 }
 
 .nome {
   font-weight: 600;
   color: white;
-  /* font-size: 20px; */
+   font-size: 30px; 
 }
 
 input {
