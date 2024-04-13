@@ -1,3 +1,3 @@
 RewriteEngine on
-RewriteCond %{REQUEST_URI} !^//Lash-Designer/
+RewriteCond %{REQUEST_URI} !^https://www.ketlyn-Lash-Designer.com/
 RewriteRule ^(.*)$ /ketlyn_lash_designer/$1 [L]
