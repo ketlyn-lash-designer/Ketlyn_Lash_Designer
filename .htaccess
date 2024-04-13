@@ -1,3 +1,3 @@
 RewriteEngine on
-RewriteCond %{HTTP_HOST} !^www.ketlyn-Lash-Designer.com$
-RewriteRule ^(.*)$ https://www.ketlyn-Lash-Designer.com/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^allan-mecanico.github.io/Lash-Designer/$
+RewriteRule ^Lash-Designer/(.*)$ https://www.ketlyn-Lash-Designer.com/$1 [R=301,L]
