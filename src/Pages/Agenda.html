@@ -86,6 +86,7 @@
           alert("Nenhum registro encontrado para o WhatsApp informado.");
         }
       }
+      
       fetch("http://4cordas.pythonanywhere.com/dados")
         .then((response) => response.json())
         .then((data) => {
@@ -112,13 +113,7 @@
         })
         .catch((error) => console.error("Erro ao buscar os dados:", error));
 
-      //lista somente os dados
-      // fetch("http://192.168.10.20:8000/dados")
-      //   .then((response) => response.json())
-      //   .then((data) => {
-      //     listaDados = data;
-      //   })
-      //   .catch((error) => console.error("Erro ao buscar os dados:", error));
+      
     </script>
     <script src="../js/main.js"></script>
   </body>
