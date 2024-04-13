@@ -36,7 +36,7 @@ saveBtn.addEventListener("click", () => {
 
   alert(`Seu atendimento foi marcado para o dia ${date} às ${time} horas.`);
 
-  fetch("http://4cordas.pythonanywhere.com/dados", {
+  fetch("https://4cordas.pythonanywhere.com/dados", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
