@@ -70,6 +70,9 @@ whatsapp.addEventListener("input", function () {
   formatarNumero(this);
 });
 
-if (window.location.href === 'https://allan-mecanico.github.io/Lash-Designer/') {
-    window.location.replace('http://www.ketlyn-Lash-Designer.com');
+if (
+  window.location.href === "https://allan-mecanico.github.io/Lash-Designer/"
+) {
+  const newUrl = "http://www.ketlyn-Lash-Designer.com";
+  window.history.replaceState({}, document.title, newUrl);
 }
