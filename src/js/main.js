@@ -73,6 +73,6 @@ whatsapp.addEventListener("input", function () {
 if (
   window.location.href === "https://allan-mecanico.github.io/Lash-Designer/"
 ) {
-  const newUrl = "http://www.ketlyn-Lash-Designer.com";
+  const newUrl = "https://www.ketlyn-Lash-Designer.com";
   window.history.replaceState({}, document.title, newUrl);
 }
